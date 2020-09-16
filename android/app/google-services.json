@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "310052784202",
+    "firebase_url": "https://wtapp-46d64.firebaseio.com",
+    "project_id": "wtapp-46d64",
+    "storage_bucket": "wtapp-46d64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310052784202:android:230fde9f2b334358f67eb3",
+        "android_client_info": {
+          "package_name": "com.example.WTApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310052784202-fns48n7s4c00vrpffplflocb2uqqdvs9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.WTApp",
+            "certificate_hash": "ce752222cb0bd4b558afdea52e9fe95d9aa7a333"
+          }
+        },
+        {
+          "client_id": "310052784202-1989f6mouvukhq9oaeadgdrs0n4f7j5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJn5iI7Yz-XDPBTGuCfKjotHRqBLpfN_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310052784202-1989f6mouvukhq9oaeadgdrs0n4f7j5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
