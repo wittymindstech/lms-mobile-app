@@ -13,10 +13,10 @@ You must to download the Android Studio and Flutter SDK, here we are using Intel
 
 ### Screenshot of App
 
-![WTSKILLS](screenshot/main 1.png "WtSkills splash screen")
+![WTSKILLS](screenshot/main1.png "WtSkills splash screen")
 
-![WTSKILLS](screenshot/main 2.png "WtSkills login screen")
+![WTSKILLS](screenshot/main2.png "WtSkills login screen")
 
-![WTSKILLS](screenshot/main 3.png "WtSkills register screen")
+![WTSKILLS](screenshot/main3.png "WtSkills register screen")
 
-![WTSKILLS](screenshot/main 4.png "WtSkills register dialog.").
+![WTSKILLS](screenshot/main4.png "WtSkills register dialog.").
