@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 
 class Category {
+  final String name;
+  final Color startColor;
+  final Color endColor;
+  final bool isLeft;
+  final String image;
   final String id;
-  final String title;
-  final Color color;
+  final String description;
+  final String subCatDescription;
 
   const Category({
+    @required this.name,
     @required this.id,
-    @required this.title,
-    this.color = Colors.orange,
+    @required this.startColor,
+    @required this.endColor,
+    @required this.isLeft,
+    @required this.image,
+    @required this.description,
+    @required this.subCatDescription,
   });
 }

@@ -1,13 +1,17 @@
+import 'package:WTApp/global/app.dart';
 import 'package:flutter/material.dart';
-import '../data.dart';
+import '../global/data.dart';
 import 'category_item.dart';
 
 class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('WTEDU'),
+        leading: Container(),
+        title: const Text(App.appName),
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.perm_identity),
@@ -18,13 +22,20 @@ class Categories extends StatelessWidget {
       body: Center(
         child: ListView(
           shrinkWrap: true,
-          padding: const EdgeInsets.all(25),
-          children: CATEGORIES
+          children: CATEGORIESITEM
               .map(
                 (catData) => CategoryItem(
-                  catData.id,
-                  catData.title,
-                  catData.color,
+                  assetImg: catData.image,
+                  context: context,
+                  descriptiontxt: catData.description,
+                  isLeft: catData.isLeft,
+                  mixColor: [
+                    catData.startColor,
+                    catData.endColor,
+                  ],
+                  size: size,
+                  titleTxt: catData.name,
+                  id: catData.id,
                 ),
               )
               .toList(),

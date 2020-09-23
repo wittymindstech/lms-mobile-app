@@ -1,4 +1,5 @@
 import 'package:WTApp/components/widgets/commonAuthWidget.dart';
+import 'package:WTApp/global/app.dart';
 import 'package:WTApp/global/colors.dart';
 import 'package:WTApp/components/snackbar.dart';
 import 'package:WTApp/components/txtFilled.dart';
@@ -50,7 +51,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 100,
                     child: Image.asset(
                       MyImage.myLogo,
-                      // color: Colors.white,
                     ),
                   ),
                   showSignupDialog(context),
@@ -74,7 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       );
     } else {
       showSnackbar(
-          _signupScaffoldKey.currentState, "Value Can't null", Colors.red);
+          _signupScaffoldKey.currentState, "Value Can't null", ColorPlate.red);
     }
   }
 
@@ -111,7 +111,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               children: <Widget>[
                 Container(
                   child: Text(
-                    "SIGN UP TO WTSkills",
+                    App.signupText,
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -130,7 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 myAuthTextHeadLine(),
                 mySocialAuth(
                   image: MyImage.userImg,
-                  text: "Username/email",
+                  text: App.userEmail,
                   onTapped: () {
                     showDialog(
                       context: context,
@@ -142,7 +142,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 mySocialAuth(
                   image: MyImage.facebookImg,
-                  text: "Continue with Facebook",
+                  text: App.facebook,
                   onTapped: () {
                     AuthController().getMyFacebookLogin(
                         context: context, key: _signupScaffoldKey.currentState);
@@ -150,7 +150,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 mySocialAuth(
                   image: MyImage.googleImg,
-                  text: "Continue with Google",
+                  text: App.google,
                   onTapped: () {
                     AuthController().signInWithGoogle(context).then((result) {
                       if (result != null) {
@@ -164,8 +164,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   onTapped: () {
                     Navigator.pushReplacementNamed(context, "/Login");
                   },
-                  text1: "Already have an account? ",
-                  text2: "Login",
+                  text1: App.alreadyhaveAcount,
+                  text2: App.loginTxt,
                 ),
               ],
             ),
@@ -199,7 +199,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               children: <Widget>[
                 Container(
                   child: Text(
-                    "SIGN UP TO WTSkills",
+                    App.signupText,
                     style: TextStyle(
                         color: ColorPlate.black,
                         fontSize: 18,
@@ -218,7 +218,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Container(
                   margin: EdgeInsets.only(left: 25, right: 25, top: 5),
                   child: Text(
-                    "Manage your account, check notifications",
+                    App.manageAcountTxt,
                     style: TextStyle(
                       color: ColorPlate.gray,
                       fontSize: 12,
@@ -228,7 +228,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Container(
                   margin: EdgeInsets.only(left: 30, right: 30),
                   child: Text(
-                    "comment on videos, and more.",
+                    App.cmtOnVidTxt,
                     style: TextStyle(
                       color: ColorPlate.gray,
                       fontSize: 12,
@@ -245,7 +245,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ? null
                         : val.contains("@") ? null : "Enter Valid Email";
                   },
-                  hint: "Email",
+                  hint: App.emailTxt,
                   prefixIcon: Icon(Icons.person_outline),
                   submit: (term) {
                     focusNode1.unfocus();
@@ -262,7 +262,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ? null
                         : val.length < 5 ? "Enter Valid Password" : null;
                   },
-                  hint: "Password",
+                  hint: App.passwordTxt,
                   isSecured: isSecured ? true : false,
                   prefixIcon: Icon(Icons.lock_outline),
                   suffixIcon: GestureDetector(
@@ -285,7 +285,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: ColorPlate.black),
                     alignment: Alignment.center,
                     child: Text(
-                      "Register",
+                      App.registerTxt,
                       style: TextStyle(
                           color: ColorPlate.white,
                           fontSize: 12,
@@ -299,18 +299,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        "By Countinuing,you agree to DanzWorld ",
+                        App.agreeTxt,
                         style: TextStyle(color: ColorPlate.gray, fontSize: 8),
                       ),
                       Text(
-                        "Terms Of Use ",
+                        App.termsOfUse,
                         style: TextStyle(
                             color: ColorPlate.black,
                             fontSize: 8,
                             fontWeight: FontWeight.w600),
                       ),
                       Text(
-                        "and",
+                        App.andTxt,
                         style: TextStyle(color: ColorPlate.gray, fontSize: 8),
                       ),
                     ],
@@ -323,12 +323,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: <Widget>[
                       Container(
                           child: Text(
-                        "Confirm that you have read DanzWorld",
+                        App.confReadTxt,
                         style: TextStyle(color: ColorPlate.gray, fontSize: 8),
                       )),
                       Container(
                           child: Text(
-                        "Privacy Policy.",
+                        App.privacyTxt,
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 8,
@@ -343,13 +343,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                            text: "Already have an account? ",
+                            text: App.alreadyhaveAcount,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 10,
                             )),
                         TextSpan(
-                            text: "Login",
+                            text: App.loginTxt,
                             style: TextStyle(
                               color: ColorPlate.green,
                               fontSize: 11,

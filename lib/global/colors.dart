@@ -11,6 +11,7 @@ class ColorPlate {
   static const Color black = const Color(0xff000000);
   static const Color white = const Color(0xffffffff);
   static const Color clear = const Color(0);
+  static const Color amber = Colors.amber;
 
   static const Color back1 = const Color(0xff1D1F22);
   static const Color back2 = const Color(0xff121314);

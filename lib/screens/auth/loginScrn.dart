@@ -1,4 +1,5 @@
 import 'package:WTApp/components/widgets/commonAuthWidget.dart';
+import 'package:WTApp/global/app.dart';
 import 'package:WTApp/global/colors.dart';
 import 'package:WTApp/components/snackbar.dart';
 import 'package:WTApp/components/txtFilled.dart';
@@ -102,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: <Widget>[
                 Container(
                   child: Text(
-                    "LOGIN TO WTSkills",
+                    App.loginToTxt,
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -129,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? null
                         : val.contains("@") ? null : "Enter Valid Email";
                   },
-                  hint: "Email",
+                  hint: App.emailTxt,
                   prefixIcon: Icon(Icons.person_outline),
                   submit: (term) {
                     focusNode1.unfocus();
@@ -146,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? null
                         : val.length < 5 ? "Enter Valid Password" : null;
                   },
-                  hint: "Password",
+                  hint: App.passwordTxt,
                   isSecured: isSecured ? true : false,
                   prefixIcon: Icon(Icons.lock_outline),
                   suffixIcon: GestureDetector(
@@ -167,10 +168,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: ColorPlate.black),
                   alignment: Alignment.center,
                   child: RaisedButton(
-                    onPressed: getSignIn,
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/Category');
+                    },
+                    // onPressed: getSignIn,
                     color: ColorPlate.black,
                     child: Text(
-                      "Login",
+                      App.loginTxt,
                       style: TextStyle(
                           color: ColorPlate.white,
                           fontSize: 12,
@@ -183,8 +187,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   onTapped: () {
                     Navigator.pushReplacementNamed(context, '/Register');
                   },
-                  text1: "Don't Have An Account? ",
-                  text2: "Register",
+                  text1: App.dontHaveAcount,
+                  text2: App.registerTxt,
                 ),
               ],
             ),

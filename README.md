@@ -20,3 +20,11 @@ You must to download the Android Studio and Flutter SDK, here we are using Intel
 ![WTSKILLS](screenshot/main3.png "WtSkills register screen")
 
 ![WTSKILLS](screenshot/main4.png "WtSkills register dialog.").
+
+![WTSKILLS](screenshot/main5.png "WtSkills Home screen.").
+
+![WTSKILLS](screenshot/main6.png "WtSkills Technical subcategory").
+
+![WTSKILLS](screenshot/main7.png "WtSkills Non Technical subcategory").
+
+![WTSKILLS](screenshot/main8.png "WtSkills News feed subcategory").
