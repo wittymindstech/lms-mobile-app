@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../course/course_screen.dart';
-import 'package:WTApp/category/categorie_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;

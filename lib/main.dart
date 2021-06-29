@@ -1,15 +1,19 @@
-import 'package:WTApp/course/course_screen.dart';
 import 'package:flutter/material.dart';
-import 'category/categorie_screen.dart';
-import 'course/course_screen.dart';
-import 'tutorial/tutorial_screen.dart';
+import 'routes.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+// void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'WTEDU',
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -29,13 +33,8 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.bold,
             )),
       ),
-      // home: CategoriesScreen(),
-      initialRoute: '/', // default is '/'
-      routes: {
-        '/': (ctx) => Categories(),
-        CategoryScreen.routeName: (ctx) => CategoryScreen(),
-        CourseScreen.routeName: (ctx) => CourseScreen(),
-      },
+      initialRoute: '/',
+      routes: routes,
     );
   }
 }

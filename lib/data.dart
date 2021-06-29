@@ -5,26 +5,25 @@ import './models/category.dart';
 const CATEGORIES = const [
   Category(
     id: 'c1',
-    title: 'Technical',
+    title: 'Media',
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Non-Technical',
+    title: 'Entertainment',
     color: Colors.red,
   ),
   Category(
     id: 'c3',
-    title: 'Kidpreneurs',
+    title: 'Education',
     color: Colors.orange,
   ),
 ];
 
-
 const COURSE = const [
   Course(
     id: 't1',
-    title: 'IOT',
+    title: 'Technical',
     categories: [
       'c1',
     ],
@@ -33,7 +32,7 @@ const COURSE = const [
   ),
   Course(
     id: 't2',
-    title: 'Artificial Intelligence',
+    title: 'Political',
     categories: [
       'c1',
     ],
@@ -42,7 +41,7 @@ const COURSE = const [
   ),
   Course(
     id: 't3',
-    title: 'Linux',
+    title: 'Current affairs',
     categories: [
       'c1',
     ],
@@ -51,7 +50,7 @@ const COURSE = const [
   ),
   Course(
     id: 't4',
-    title: 'Flutter',
+    title: 'Environmental',
     categories: [
       'c1',
     ],
@@ -60,7 +59,7 @@ const COURSE = const [
   ),
   Course(
     id: 't5',
-    title: 'Polity',
+    title: 'Theare',
     categories: [
       'c2',
     ],
@@ -69,7 +68,16 @@ const COURSE = const [
   ),
   Course(
     id: 't6',
-    title: 'History',
+    title: 'Short Movies',
+    categories: [
+      'c2',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+  Course(
+    id: 't6',
+    title: 'Talent show',
     categories: [
       'c2',
     ],
@@ -78,7 +86,52 @@ const COURSE = const [
   ),
   Course(
     id: 't7',
-    title: 'Poems',
+    title: 'School - 10th, 12th',
+    categories: [
+      'c3',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+  Course(
+    id: 't8',
+    title: 'College',
+    categories: [
+      'c3',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+  Course(
+    id: 't9',
+    title: 'Higher education',
+    categories: [
+      'c3',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+  Course(
+    id: 't10',
+    title: 'Technical',
+    categories: [
+      'c3',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+  Course(
+    id: 't11',
+    title: 'Non Technical',
+    categories: [
+      'c3',
+    ],
+    url: 'https://ailist.herokuapp.com/',
+    color: Colors.blue,
+  ),
+    Course(
+    id: 't12',
+    title: 'Commerce',
     categories: [
       'c3',
     ],
