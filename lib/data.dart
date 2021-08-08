@@ -76,7 +76,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't6',
+    id: 't7',
     title: 'Talent show',
     categories: [
       'c2',
@@ -85,7 +85,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't7',
+    id: 't8',
     title: 'School - 10th, 12th',
     categories: [
       'c3',
@@ -94,7 +94,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't8',
+    id: 't9',
     title: 'College',
     categories: [
       'c3',
@@ -103,7 +103,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't9',
+    id: 't10',
     title: 'Higher education',
     categories: [
       'c3',
@@ -112,7 +112,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't10',
+    id: 't11',
     title: 'Technical',
     categories: [
       'c3',
@@ -121,7 +121,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
   Course(
-    id: 't11',
+    id: 't12',
     title: 'Non Technical',
     categories: [
       'c3',
@@ -130,7 +130,7 @@ const COURSE = const [
     color: Colors.blue,
   ),
     Course(
-    id: 't12',
+    id: 't13',
     title: 'Commerce',
     categories: [
       'c3',

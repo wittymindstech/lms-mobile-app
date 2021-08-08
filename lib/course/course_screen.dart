@@ -11,21 +11,29 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final routeArgs = ModalRoute.of(context).settings.arguments as Map<String, String>;
+    final routeArgs =
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
     final categoryColor = routeArgs['color'];
-    final categoryCourse = COURSE.where((course) {return course.categories.contains(categoryId);}).toList();
+    final categoryCourse = COURSE.where((course) {
+      return course.categories.contains(categoryId);
+    }).toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text(categoryTitle),),
-      body: ListView.builder(itemBuilder: (ctx, index) {
-        return CourseItem(
-          title: categoryCourse[index].title,
-          color: categoryCourse[index].color,
-        );
-        }, itemCount: categoryCourse.length,)
-    );
+        appBar: AppBar(
+          title: Text(categoryTitle),
+        ),
+// body: GridView.builder(gridDelegate: , itemBuilder: null),
+        body: ListView.builder(
+          itemBuilder: (ctx, index) {
+            return CourseItem(
+                title: categoryCourse[index].title,
+                color: categoryCourse[index].color,
+                id: categoryCourse[index].id);
+          },
+          itemCount: categoryCourse.length,
+        ));
   }
 }
 
