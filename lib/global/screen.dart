@@ -6,22 +6,20 @@ class Screen {
     await SystemChrome.setPreferredOrientations(
         [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
   }
-  
-  static void hideSystemBars(){
+
+  static void hideSystemBars() {
     SystemChrome.setEnabledSystemUIOverlays([]);
   }
 
-  static double heigth(BuildContext context){
+  static double height(BuildContext context) {
     return MediaQuery.of(context).size.height;
   }
 
-  static void showSystemBars(){
+  static void showSystemBars() {
     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
   }
 
-static void resetOrientation() async {
-  await SystemChrome.setPreferredOrientations(
-      []);
-}
-
+  static void resetOrientation() async {
+    await SystemChrome.setPreferredOrientations([]);
+  }
 }

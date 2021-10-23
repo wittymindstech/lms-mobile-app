@@ -209,7 +209,7 @@ class _VideoViewState extends State<VideoView>
           } else {
             return Container(
               color: Theme.of(context).backgroundColor,
-              height: Screen.heigth(context),
+              height: Screen.height(context),
               width: double.infinity,
               child: Center(
                 child: CircularProgressIndicator(),

@@ -18,6 +18,22 @@ class _SplashScreenState extends State<SplashScreen>
   bool hasViewIntro = false;
   String userLoghin;
   bool successAccountCreated = false;
+  void checkIntroIsSaved() async {
+    SharedPreferences _sharePrefer = await SharedPreferences.getInstance();
+    bool codeIntro = _sharePrefer.getBool('INTRO') ?? false;
+
+    if (codeIntro == true) {
+      goScreen(screen: "/Login");
+    } else {
+      goScreen(screen: '/intro');
+    }
+  }
+
+  void goScreen({String screen}) async {
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.pushReplacementNamed(context, screen);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -81,7 +97,9 @@ class _SplashScreenState extends State<SplashScreen>
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               margin: EdgeInsets.only(left: 25, right: 25, top: 0),
               child: Text(
